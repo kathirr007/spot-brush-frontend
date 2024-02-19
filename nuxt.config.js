@@ -1,6 +1,8 @@
 // import colors from 'vuetify/es5/util/colors'
 import { defineNuxtConfig } from '@nuxt/bridge'
 
+const apiUrl = process.env.BASE_URL || 'http://localhost:5500'
+
 export default defineNuxtConfig({
   bridge: false,
   server: {
@@ -107,7 +109,7 @@ export default defineNuxtConfig({
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:5600',
+    baseURL: apiUrl,
     // proxy: true
   },
   proxy: {
@@ -124,7 +126,7 @@ export default defineNuxtConfig({
   },
   /* server Middleware */
   serverMiddleware: [
-    '~/server/routes/index.js'
+    // '~/server/routes/index.js'
   ],
   /* server Middleware end */
   /*
