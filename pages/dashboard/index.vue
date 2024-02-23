@@ -536,7 +536,7 @@
 
 <script>
 export default {
-  middleware: ["refreshToken", "authenticated"],
+  middleware: "authenticated",
   data() {
     return {
       dialog: false,

@@ -125,9 +125,9 @@ export default defineNuxtConfig({
       // '/api2/': 'http://api.another-website.com'
   },
   /* server Middleware */
-  serverMiddleware: [
+  /* serverMiddleware: [
     // '~/server/routes/index.js'
-  ],
+  ], */
   /* server Middleware end */
   /*
   ** vuetify module configuration

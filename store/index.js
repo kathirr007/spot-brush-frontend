@@ -62,7 +62,6 @@ export const actions = {
     commit('clearAuth', redirect)
   },
   refreshToken({commit, state}) {
-    // debugger
     if(state.auth) {
       if(new Date(Date.now()) > new Date(state.auth.jwt_expired)) {
         return this.$axios.$post('/auth/refresh-token').then(result => {

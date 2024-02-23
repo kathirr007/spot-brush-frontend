@@ -83,9 +83,15 @@
 <script>
   // import { AmazonCognitoIdentity } from 'amazon-cognito-identity-js';
   import * as AmazonCognitoIdentity from "amazon-cognito-identity-js";
-  import { CognitoAuth } from 'amazon-cognito-auth-js';
+
   export default {
-    middleware: ['refreshToken','notAuthenticated'],
+    // middleware: ['refreshToken','notAuthenticated'],
+    middleware({ store, redirect }) {
+      // If the user is not authenticated
+      if (store.state.auth !== null) {
+        return redirect('/dashboard')
+      }
+    },
     head: {
       // title: process.env.npm_package_name || "",
       title: `SpotBrush | Sign In`,

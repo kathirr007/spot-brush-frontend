@@ -1,5 +1,6 @@
-export default function ({ store }) { 
+export default function ({ store }) {
   if(process.client) {
-    store.dispatch('refreshToken') 
+    debugger
+    store.dispatch('refreshToken')
   }
 }

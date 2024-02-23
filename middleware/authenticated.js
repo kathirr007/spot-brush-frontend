@@ -22,8 +22,8 @@ export default function({ $toast, store, redirect }) {
       return redirect('/auth/signin')
     } */
     const isAuth = store.getters['isAuthenticated']
-
     if(!isAuth) {
+      debugger;
       return redirect('/auth/signin')
     }
 }
